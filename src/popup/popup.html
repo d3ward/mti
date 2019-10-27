@@ -1,0 +1,50 @@
+<html>
+<head>
+	<title>MIT Popup</title>
+	<meta name="viewport" content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+	<div id="mylrt" class="lrt">
+		<div class="lrt_cnt" >
+			<div class="lrt-body" id="lrt_body"></div>
+			<div class="lrt-footer"><button id="can_lrt">Cancel </button><button id="ok_lrt"> Ok </button></div>
+		</div>
+	</div>
+	<div class="cnt">
+		<label class="tgl"><input type="checkbox" id="st_bl"/><span class="slr"></span></label><span class="spn">Enable on this website</span>
+		<input id="dmn" type="text" />
+		<div id="res_btn">Reset to current domain</div><hr>
+		<label class="tgl"><input type="checkbox" id="opt0"/><span class="slr"></span></label><span class="spn">Auto detect color from website</span> <br>
+		<label class="tgl"><input type="checkbox" id="opt1"/><span class="slr"></span></label><span class="spn">Don't use white/black colors</span><br>
+		<label class="tgl"><input type="checkbox" id="opt2"/><span class="slr"></span></label><span class="spn">Keep color detection updated </span><hr>
+		<div id="clpkr">
+			<span key="pkr" class="pkr" id="pkr">
+				<h4 class="dscr">HEX</h3>
+				<div class="ic_"><span id="def_btn">&#9998;</span><input type="text" id="hex_in" maxlength="7" ></div>
+				<h4 class="dscr">COLOR</h3>
+				<div class="swatch" id="color"></div>
+				<h4 class="dscr">HUE</h4>
+				<div class="sld_cnt"><input id="hue" type="range" min="1" max="300" value="130" class="slider hue" /></div>
+				<h4 class="dscr">SATURATION</h4>
+				<div class="sld_cnt"><input id="sat" type="range" min="1" max="100" value="60" class="slider sat" /></div>
+				<h4 class="dscr">LIGHT</h4>
+				<div class="sld_cnt"><input id="light" type="range" min="1" max="100" value="55" class="slider light" /></div>
+			</span>
+		</div><hr>
+			<h4 style="color: #E84F3E;" id="status"></h4>
+			<div class="cnt2">
+				<button id="save_btn" style="background:green">Save</button>
+				<button id="res2_btn" style="background:red">Reset</button></div>
+			<div class="cnt2">
+				<button id="exp_btn" >Export</button>
+				<button id="imp_btn" >Import</button>
+			</div>
+			<input  id="imp_f" type="file"  accept=".json" style="display:none"/>
+	</div>
+	<script type="text/javascript" src="../js/data-storage.js"></script>
+	<script type="text/javascript" src="popup.js"></script>
+</body>
+
+</html>
