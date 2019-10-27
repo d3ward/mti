@@ -9,7 +9,7 @@ Some source of theme-color meta tag  [Link1](https://developers.google.com/web/u
 
 MTI can be used on browsers that supports extensions like [Kiwi Browser](https://kiwibrowser.com/)
 
-Download latest version -> [Releases](https://github.com/d3ward/mti/releases)
+Download latest version (mti.zip) -> [Releases](https://github.com/d3ward/mti/releases)
 
 # Preview 
 
