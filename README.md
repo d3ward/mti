@@ -1,6 +1,8 @@
 # MTI (Meta Theme Injector)
-
-![MTI Logo](https://github.com/d3ward/mti/blob/master/src/png/icon144.png)
+<p align="center">
+ <img src="src/png/icon256.png" alt="MTI"
+	title="b2ntp" width="160" height="160" />
+</p>
 
 Meta Theme Injector is an extension that let you customize the theme-color meta tag on websites.
 
@@ -30,5 +32,5 @@ Download latest version (mti.zip) -> [Releases](https://github.com/d3ward/mti/re
 If you have a suggestion feel free to share it by opening an issue
 
 ## License
-This project is licensed under [(CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-
+MTI is licensed under [(CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+This project includes [Heroicons](https://heroicons.dev/) licensed under [MTI](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE)
