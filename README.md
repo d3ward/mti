@@ -33,4 +33,5 @@ If you have a suggestion feel free to share it by opening an issue
 
 ## License
 MTI is licensed under [(CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 This project includes [Heroicons](https://heroicons.dev/) licensed under [MTI](https://github.com/tailwindlabs/heroicons/blob/master/LICENSE)
