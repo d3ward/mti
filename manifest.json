@@ -3,7 +3,7 @@
 	"author": "Eduard Ursu ( @d3ward )",
 	"name": "MTI",
 	"description": "Meta Theme Injector let you customize the theme-color meta tag",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"browser_action": {
 		"default_icon": "src/png/icon20.png",
 		"default_popup": "src/popup/popup.html",

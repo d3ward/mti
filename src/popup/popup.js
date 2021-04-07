@@ -1,3 +1,79 @@
+var d3ss = {
+	//Open and close the navbar , on default button ofr navbar or using the toggle parameter
+	navbar: function (toggle) {
+		var n = document.querySelector("nav");
+		if (n) {
+			const toggleActive = function () {
+				n.classList.toggle("opened");
+			};
+			var oc = (toggle) ? toggle : "nav>div>div";
+			document.querySelector(oc).addEventListener("click", toggleActive);
+		}
+	},
+	theme: function () {
+		//Theme Switcher
+		var toggle = document.getElementById("theme-toggle");
+		if (window.CSS && CSS.supports("color", "var(--bg)") && toggle) {
+			var storedTheme = localStorage.getItem('theme') || (window.matchMedia(
+					"(prefers-color-scheme: dark)").matches ?
+				"dark" : "light");
+			if (storedTheme)
+				document.documentElement.setAttribute('data-theme', storedTheme)
+			toggle.onclick = function () {
+				var currentTheme = document.documentElement.getAttribute("data-theme");
+				var targetTheme = "light";
+
+				if (currentTheme === "light") {
+					targetTheme = "dark";
+				}
+
+				document.documentElement.setAttribute('data-theme', targetTheme)
+				localStorage.setItem('theme', targetTheme);
+			};
+		}
+	},
+	gotop: function () {
+		const gt_btn = document.getElementById('gt-link');
+		if (gt_btn) {
+			// Let's set up a function that shows our scroll-to-top button if we scroll beyond the height of the initial window.
+			window.addEventListener("scroll", () => {
+				let y = window.scrollY;
+				if (y > 0) {
+					gt_btn.className = "gt-link show";
+				} else {
+					gt_btn.className = "gt-link hide";
+				}
+			});
+			gt_btn.onclick = function (e) {
+				e.preventDefault();
+				if (document.documentElement.scrollTop || document.body.scrollTop > 0) {
+					window.scroll({
+						top: 0,
+						left: 0,
+						behavior: 'smooth'
+					});
+				}
+			}
+		}
+	},
+	modal: function () {
+		// Modal
+		var modal = document.getElementById("myModal");
+		var btn = document.getElementById("info");
+		var span = document.getElementsByClassName("close")[0];
+		btn.onclick = function () {
+			modal.style.display = "block";
+		}
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	}
+}
 
 	let dmn_inp=document.getElementById("dmn");
 	let chk_st=document.getElementById("st_bl");
@@ -125,14 +201,14 @@
 			document.getElementById("mylrt").style.display ="none";
 		}
 	}
-	let messages=["Reset color to default one on current website<br> You can edit below and change default color ,then click ok to confirm change<input id='def_inp' type='text' maxlength='7'/>",
+	let messages=["Reset color to default one on current website<br> You can edit below and change default color ,then click ok to confirm change<input class='_mt1' id='def_inp' type='text' maxlength='7'/>",
 	"Are you sure you want to reset ? ( you will lose all extension data like colors per hosts)",
 	]
 	const show_lrt = (l) =>{
 		lrtStatus=l;
 		document.getElementById("lrt_body").innerHTML= messages[l];
 		if(l==0)document.getElementById("def_inp").value=defaultColor;
-		document.getElementById("mylrt").style.display ="block";
+		document.getElementById("mylrt").style.display ="flex";
 	}
 	
 	const exportData = () => {
@@ -163,7 +239,7 @@
 		return dataStorage.load().then(function(injectionData)
 		{
 			if (!injectionData) return;
-			alert(Object.values(injectionData) + " |\n "+ Object.keys(injectionData) +" |\n "+chk_st.checked +" |\n"+Array.isArray(injectionData.opt));
+			//alert(Object.values(injectionData) + " |\n "+ Object.keys(injectionData) +" |\n "+chk_st.checked +" |\n"+Array.isArray(injectionData.opt));
 			let color=injectionData.color;
 			let opt=injectionData.opt;
 			opt0.checked=opt[1],opt1.checked=opt[2],opt2.checked=opt[3];
@@ -193,16 +269,20 @@
 			dataStorage.remove(currentInjectionData.domain);
 		let injectionData = new InjectedData(newDomain,hexInput.value,[chk_st.checked,opt0.checked,opt1.checked,opt2.checked]);
 		currentInjectionData = injectionData;
-		alert(Object.values(injectionData) + " |\n "+ Object.keys(injectionData) +" |\n "+chk_st.checked);
+		//alert(Object.values(injectionData) + " |\n "+ Object.keys(injectionData) +" |\n "+chk_st.checked);
 		dataStorage.save(injectionData);
 		setTimeout(function(){
 			status.textContent = ''; 
 		},2000);
+	}
+	const dismBox = ()=>{
+		document.getElementById("mylrt").style.display ="none";
 	}
 	document.addEventListener("DOMContentLoaded", ()=>
 	{
 		chrome.tabs.query({currentWindow: true, active: true}, function(tabs)
 		{
 			window.tab = tabs[0];loadEditorContent().then(() =>{evList();});
-		})
+		});
+		d3ss.theme();
 	})

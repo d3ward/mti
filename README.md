@@ -11,11 +11,11 @@ MTI can be used on browsers that supports extensions like [Kiwi Browser](https:/
 
 Download latest version (mti.zip) -> [Releases](https://github.com/d3ward/mti/releases)
 
-# Preview 
+## Preview 
 
 ![mtiguide](https://github.com/d3ward/mti/blob/master/src/png/mtiguide.png)
 
-# Features
+## Features
 
 - Enable/disable MTI on website
 - Auto detect color from website
@@ -23,9 +23,12 @@ Download latest version (mti.zip) -> [Releases](https://github.com/d3ward/mti/re
 - Edit default color
 - Input a custom color with simple sliders or just input the hex value
 - Import/Export
-(Rememeber : after any option changed you need to save )
+(<b>Rememeber : after any option changed you need to save </b>)
 
-# To Do List
+## Contributing
 
-- [ ] Switch from "keep updated" to "custom" mode
-- [ ] Improve the code to apply the color faster
+If you have a suggestion feel free to share it by opening an issue
+
+## License
+This project is licensed under [(CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
