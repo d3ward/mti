@@ -90,11 +90,7 @@ main {
     padding-top: 4rem;
     overflow-x: hidden;
 }
-@media screen and (min-width: 400px) {
-    main{
-        min-width: 370px;
-    }
-}
+
 
 /* ------------------ Footer ------------------ */
 footer {
@@ -255,90 +251,35 @@ button>svg,
 /* ----------- Grid columns and row ----------- */
 .grid {
     flex-wrap: wrap;
-}
-
-.row,
-.grid {
+  }
+  
+  .row, .grid {
     display: flex;
     align-items: stretch;
     margin: 1rem 0 0 0;
-}
-
-.row>[class*="col"],
-.row>div,
-.grid>[class*="col"],
-.grid>div {
+  }
+  
+  .row > [class*="col"], .row > div, .grid > [class*="col"], .grid > div {
     flex: 0 0 auto;
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
     padding: .5rem;
-}
-
-.row>[class*="col"]>*,
-.row>div>*,
-.grid>[class*="col"]>*,
-.grid>div>* {
+  }
+  
+  .row > [class*="col"] > *, .row > div > *, .grid > [class*="col"] > *, .grid > div > * {
     margin: 0;
-}
-
-.row .col,
-.row>div,
-.grid .col,
-.grid>div {
+  }
+  
+  .row .col, .row > div, .grid .col, .grid > div {
     flex: 1 1 100%;
-}
-
-.row .col-2,
-.grid .col-2 {
-    width: 16.6666%;
-}
-
-.row .col-3,
-.grid .col-3 {
-    width: 25%;
-}
-
-.row .col-4,
-.grid .col-4 {
-    width: 33.3333%;
-}
-
-.row .col-6,
-.grid .col-6 {
-    width: 50%;
-}
-
-.row .col-8,
-.grid .col-8 {
-    width: 66.6666%;
-}
-
-.row .col-9,
-.grid .col-9 {
-    width: 75%;
-}
-
-.row .col-10,
-.grid .col-10 {
-    width: 83.3333%;
-}
-
-@media (max-width: 40em) {
-
-    .row:not(.keep-width),
-    .grid:not(.keep-width) {
-        flex-direction: column !important;
+  }
+  
+  @media (max-width: 40em) {
+    .row:not(.keep-width) > [class*="col"], .row:not(.keep-width) > div, .grid:not(.keep-width) > [class*="col"], .grid:not(.keep-width) > div {
+      width: auto;
     }
-
-    .row:not(.keep-width)>[class*="col"],
-    .row:not(.keep-width)>div,
-    .grid:not(.keep-width)>[class*="col"],
-    .grid:not(.keep-width)>div {
-        width: auto;
-    }
-}
-
+  }
 /* ----------------- Utilities ---------------- */
 
 ._bg-green {
@@ -365,7 +306,6 @@ button>svg,
   flex-flow: wrap;
   justify-content: center;
   align-items: center;
-
 }
 ._list-box{
     list-style: none;

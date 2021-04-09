@@ -12,7 +12,7 @@
 	<header class="fixed">
 		<nav>
 			<div>
-				<a href="adblock.html">
+				<a>
 					<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 300 300">
 						<path
 							d="M37.019 136.707c.895-6.907 12.676-24.878 20.227-28.353 13.764 13.057 115.122 132.015 134.882 156.89-19.182-13.746-154.695-121.602-155.11-128.537z"
@@ -101,7 +101,7 @@
 		<div class="grid">
 			<div>
 				<input type="checkbox" id="st_bl" class="toggle" />
-				<label for="#st_bl">Enable on this website </label> <br>
+				<label for="st_bl">Enable on this website </label> <br>
 			</div>
 			<div>
 				<input id="dmn" type="text" /><br>
@@ -113,15 +113,15 @@
 				<ul class="_list-box">
 					<li>
 						<input type="checkbox" id="opt0" class="toggle" />
-						<label for="#opt0">Auto detect color from website</label>
+						<label for="opt0">Auto detect color from website</label>
 					</li>
 					<li>
 						<input type="checkbox" id="opt1" class="toggle" />
-						<label for="#opt1">Don't use white/black colors</label>
+						<label for="opt1">Don't use white/black colors</label>
 					</li>
 					<li>
 						<input type="checkbox" id="opt2" class="toggle" />
-						<label for="#opt2">Keep color detection updated</label>
+						<label for="opt2">Keep color detection updated</label>
 					</li>
 				</ul>
 			</div>
@@ -140,55 +140,66 @@
 								</svg></span>
 							<input type="text" id="hex_in" maxlength="7" class="_ta-center">
 						</div>
-							<div class="swatch" id="color"></div>
-							<h4 class="dscr">HUE</h4>
-							<div class="sld_cnt"><input id="hue" type="range" min="1" max="300" value="130"
-									class="slider hue" /></div>
-							<h4 class="dscr">SATURATION</h4>
-							<div class="sld_cnt"><input id="sat" type="range" min="1" max="100" value="60"
-									class="slider sat" /></div>
-							<h4 class="dscr">LIGHT</h4>
-							<div class="sld_cnt"><input id="light" type="range" min="1" max="100" value="55"
-									class="slider light" /></div>
+						<div class="swatch" id="color"></div>
+						<h4 class="dscr">HUE</h4>
+						<div class="sld_cnt"><input id="hue" type="range" min="1" max="300" value="130"
+								class="slider hue" /></div>
+						<h4 class="dscr">SATURATION</h4>
+						<div class="sld_cnt"><input id="sat" type="range" min="1" max="100" value="60"
+								class="slider sat" /></div>
+						<h4 class="dscr">LIGHT</h4>
+						<div class="sld_cnt"><input id="light" type="range" min="1" max="100" value="55"
+								class="slider light" /></div>
 				</span>
 			</div>
 			<div>
 				<h4 class="_cl-red" id="status"></h4>
 				<div class="_g-flex">
-<button id="save_btn" class="_bg-green"><svg fill="currentColor" viewBox="0 0 20 20"
-						xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z">
-						</path>
-					</svg>&nbsp;&nbsp; Save</button>
-				<button id="res2_btn" class="_bg-red"><svg fill="currentColor" viewBox="0 0 20 20"
-						xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd"
-							d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-							clip-rule="evenodd"></path>
-					</svg>
-					&nbsp;&nbsp; Reset</button>
-				<button id="exp_btn"><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>&nbsp; Export</button>
-				<button id="imp_btn"><svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>&nbsp; Import</button>
+					<button id="save_btn" class="_bg-green"><svg fill="currentColor" viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z">
+							</path>
+						</svg>&nbsp;&nbsp; Save</button>
+					<button id="res2_btn" class="_bg-red"><svg fill="currentColor" viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd"
+								d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+								clip-rule="evenodd"></path>
+						</svg>
+						&nbsp;&nbsp; Reset</button>
+					<button id="exp_btn"><svg fill="currentColor" viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd"
+								d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+								clip-rule="evenodd"></path>
+						</svg>&nbsp; Export</button>
+					<button id="imp_btn"><svg fill="currentColor" viewBox="0 0 20 20"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd"
+								d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z"
+								clip-rule="evenodd"></path>
+						</svg>&nbsp; Import</button>
 				</div>
-				
+
 				<input id="imp_f" type="file" accept=".json" style="display:none" />
 			</div>
 		</div>
 	</main>
 	<footer>
 		<div class="grid">
-
-		
-		<div>Meta Theme Injector v1.0.2 </div>
-		<div>Licensed under <b><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">(CC BY-NC-SA 4.0)</a></b></div>
-		<div><a href="https://heroicons.dev/">Heroicons</a> licensed under <b><a href="https://github.com/tailwindlabs/heroicons/blob/master/LICENSE">MTI</a></b></div>
-		<div> Made with
-			<svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-				<path fill-rule="evenodd"
-					d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
-					clip-rule="evenodd"></path>
-			</svg> by d3ward </div></div>
+			<div>Meta Theme Injector v1.0.2 </div>
+			<div>Licensed under <b><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">(CC BY-NC-SA
+						4.0)</a></b></div>
+			<div><a href="https://heroicons.dev/">Heroicons</a> licensed under <b><a
+						href="https://github.com/tailwindlabs/heroicons/blob/master/LICENSE">MTI</a></b></div>
+			<div> Made with
+				<svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd"
+						d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+						clip-rule="evenodd"></path>
+				</svg> by d3ward </div>
+		</div>
 	</footer>
 	<div id="mylrt" class="lrt">
 		<div class="lrt_cnt">
