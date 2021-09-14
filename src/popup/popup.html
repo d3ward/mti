@@ -8,53 +8,59 @@
 </head>
 
 <body>
+	<div class="alert-container _top _center" id="nt1">
+	</div>
+	<!-- Modal Box Demo -->
+	<div class="modal" id="clrp">
+		<div>
+			<div>
+				<span key="pkr" class="pkr _ta-center" id="pkr">
+					<input type="text" id="hex_in" maxlength="7" class="_ta-center">
+					<div class="swatch" id="color"></div>
+					<span class="dscr">HUE</span>
+					<div class="sld_cnt"><input id="hue" type="range" min="1" max="300" value="130"
+							class="slider hue" /></div>
+					<span class="dscr">SATURATION</span>
+					<div class="sld_cnt"><input id="sat" type="range" min="1" max="100" value="60" class="slider sat" />
+					</div>
+					<span class="dscr">LIGHT</span>
+					<div class="sld_cnt"><input id="light" type="range" min="1" max="100" value="55"
+							class="slider light" /></div>
+				</span>
+			</div>
+			<hr>
+			<footer>
+				<button class="close-modal btn-red ghost" id="clrp_cancel">
+					Cancel
+				</button>
+				<button  id="clrp_apply">
+					Apply
+				</button>
+			</footer>
+		</div>
+	</div>
+	<!-- Modal Box Demo -->
+	<div class="modal" id="dialog">
+		<div>
+			<header>
+				<h3>Modal Header</h3>
+				<button class="close-modal">Close</button>
+			</header>
+			<hr>
+			<div>
+			</div>
+			<hr>
+			<footer>
+				<button id="can_lrt">Cancel </button><button id="ok_lrt"> Ok </button>
+			</footer>
+		</div>
+	</div>
 	<!-- Navigation -->
 	<header class="fixed">
 		<nav>
 			<div>
 				<a>
-					<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 300 300">
-						<path
-							d="M37.019 136.707c.895-6.907 12.676-24.878 20.227-28.353 13.764 13.057 115.122 132.015 134.882 156.89-19.182-13.746-154.695-121.602-155.11-128.537z"
-							fill="#b10dc9" paint-order="stroke markers fill" />
-						<path
-							d="M58.8 103.618c3.535-3.747 20.763-25.966 26.884-25.317 8.993 12.607 104.92 174.305 106.055 182.205C162.53 228.93 70.73 121.883 58.801 103.617z"
-							fill="#ff4136" paint-order="stroke markers fill" />
-						<path
-							d="M86.708 73.294c6.761-5.09 30.148-22.621 31.561-18.483 3.256 9.528 70.54 186.517 70.131 194.548C180.392 236.9 91.11 82.883 86.708 73.294z"
-							fill="#ff851b" paint-order="stroke markers fill" />
-						<path
-							d="M120.006 54.788c.119-5.569 25.158-18.225 32.654-17.8 2.922 10.048 37.869 196.983 34.513 201.532-4.757-9.955-45.482-123-67.167-183.732z"
-							fill="#ffdc00" paint-order="stroke markers fill" />
-						<path
-							d="M155.692 36.51c5.343-7.667 28.438-11.5 35.716-10.92 1.116 69.156.885 192.159-.88 208.381-3.809-13.439-28.226-132.928-34.837-197.46z"
-							fill="#2ecc40" paint-order="stroke markers fill" />
-						<path
-							d="M193.632 253.54c1.003-15.967-5.554-228.156 1.599-230.342 6.51-1.957 70.593-3.492 77.046-.135 5.068 1.395 3.234 227.731 1.101 230.99-1.89 2.604-74.826 3.491-79.746-.513z"
-							fill="#0074d9" paint-order="stroke markers fill" />
-						<circle cx="234.59" cy="241.236" r="5.052" paint-order="stroke markers fill" />
-						<path
-							d="M207.336 278.683c8.039-1.207 15.834-9.027 21.966-13.394-.818 4.175-9.838 13.884-13.861 15.125-2.229.572-6.257-.96-8.105-1.731z"
-							fill="#b10dc9" paint-order="stroke markers fill" />
-						<path
-							d="M226.55 264.579c.325 0-9.824 8.218-13.507 11.16-3.348 2.673-8.647-1.86-10.132-1.526 7.267-2.178 18.062-7.552 23.638-9.634z"
-							fill="#ff4136" paint-order="stroke markers fill" />
-						<path
-							d="M199.483 268.128c8.981 1.148 15.069-3.533 22.817-5.03 2.34 1.615-10.894 7.554-14.358 9.287-2.22 1.49-8.057-1.929-8.46-4.257z"
-							fill="#ff851b" paint-order="stroke markers fill" />
-						<path
-							d="M196.15 261.5c6.876 1.979 19.368-.217 26.18-.995-2.998.952-15.335 6.7-19.158 6.777-2.032.423-10.554-7.359-7.023-5.783z"
-							fill="#ffdc00" paint-order="stroke markers fill" />
-						<path
-							d="M193.632 253.54c5.927 2.993 20.272 2.622 26.06 2.74 3.954 2.383-14.15 4.923-18.722 5.053-2.026-.037-7.528-6.41-7.338-7.793z"
-							fill="#2ecc40" paint-order="stroke markers fill" />
-						<path
-							d="M213.655 285.174c-13.956-7.257-177.667-98.146-191.597-107.332-2.685-2.576-3.602-5.08-3.361-9.184 1.895-8.307 15.84-28.629 16.657-34.618.386-3.307 1.476-5.286 5.914-10.74 6.577-8.625 4.85-12.515 14.205-18.8 1.888-1.035 2.308-1.549 2.988-3.658 1.133-3.516 1.791-4.345 7.12-8.96 9.565-8.871 9.176-13.747 18.255-16.578 1.503-.442 2.08-.944 2.772-2.41 2.092-3.18 3.747-4.215 9.316-8.37 11.564-6.95 12.75-11.8 20.294-12.92 1.68-.45 2.416-.824 3.907-2.385 1.815-2.638 3.449-3.613 10.28-6.13 14.587-5.733 15.948-9.823 21.52-9.175 1.887.258 1.381.991 4.903-1.531 2.512-1.979 4.71-2.627 10.966-4.246 15.156-2.982 18.378-6.76 23.515-5.232 2.658 1.5 2.063-.584 6.458-1.696 4.294-1.07 13.872-.89 23.861-2.77 4.579-.913 6.438-.899 8.774.066 1.603.662 4.628.825 19.448 1.046l17.55.263c4.376.092 8.325 4.09 8.68 7.708.05 6.183-.075 215.925-.062 223.049-.024 2.052-2.91 6.54-6.633 7.138-2.582.202-26.659.43-29.184.505-2.68 4.327-13.38 24.94-17.386 26.575-2.483.79-5.03 1.57-9.16.384zm3.853-6.369c1.536-.73 4.822-4.367 10.72-11.867.866-1.104 1.392-1.524-6.706 5.36-5.796 4.93-7.048 5.678-10.203 6.113l-2.26.31 1.422.635c1.765.786 4.693.556 7.027-.55zm-3.877-3.954c1.534-.783 11.317-8.914 11.317-9.406 0-.22-2.55 1.212-7.443 4.176-5.757 3.486-7.815 4.33-10.699 4.381-1.499.026-2.727.112-2.728.19 0 .079.694.444 1.541.813 2.184.95 5.991.875 8.012-.155zm-4.855-3.87c1.533-.44 13.452-7.159 13.181-7.432-.072-.07-3.644 1.166-7.937 2.748-7.252 2.67-8.022 2.858-10.824 2.638-2.643-.208-2.93-.153-2.322.456.802.803 3.953 2 5.341 2.032.524.01 1.677-.187 2.56-.441zm4.647-7.384c3.445-1.275 6.205-2.375 6.134-2.447-.07-.07-3.743.517-8.16 1.306-8.218 1.467-10.67 1.51-13.143.228-2.711-1.407-.554 1.24 2.266 2.782 2.297 1.254 5.856.739 12.903-1.868zM57.246 108.354c-3.24 3.322-17.532 21.34-18.342 23.124-1.139 2.502-1.482 6.43.525 8.234 1.314 1.18 151.843 125.344 152.699 125.533-5.485-6.083-131.725-153.853-134.882-156.89zm152.998 151.358l7.353-1.314-9.014-.237c-8.757-.23-9.077-.273-11.337-1.549-1.279-.72-2.42-1.215-2.537-1.098-.496.496 3.6 4.165 5.337 4.78 2.483.879 1.794.918 10.198-.583zm-20.809-2.854C179.736 239.42 109.605 118.88 85.685 78.3c-6.84 5.358-18.247 16.92-22.04 20.785-3.795 3.865-4.042 5.033-1.97 8.381.629 1.381 127.474 150.153 128.071 150.21.074.007-.063-.362-.31-.818zm84.299-7.977c-.226-5.554-.337-217.265-.5-221.051-.256-2.461-3.018-4.773-6.055-4.929-1.332-.067-12.355-.466-34.59-.375l-29.999.281c-5.602.25-8.604 2.968-8.932 6.494 1.091 73.267.439 212.86.488 220.174.09 2.369 2.755 5.411 5.969 5.411 4.614.425 34.472.42 66.897.43 3.46-.34 6.098-1.933 6.722-6.435zM117.504 55.258c-4.109 2.346-24.632 16.25-27.156 18.503-2.523 2.252.18 6.181.18 6.181C97.305 90.794 178.91 232.7 188.3 248.96c-8.648-22.65-50.528-131.564-70.795-193.7zm35.11-17.347c-4.197 1.26-25.037 10.593-28.967 12.745-3.376 2.055-3.795 3.155-2.64 6.302 1.497 4.083 67.58 184.58 67.8 184.37-5.076-.307-32.82-197.718-36.194-203.417zm37.176-11.528c-4.817.892-26.339 5.984-29.584 6.87-4.074 1.306-4.663 4.062-4.027 7.093 2.225 13.81 31.504 177.284 34.35 193.625-.14-11.445 1.353-188.646-.739-207.588z" />
-						<path
-							d="M248.437 108.92c-1.437-1.713-2.897-2.251-4.847-2.656 0 0-.04-1.341-.06-2.854l10.299-.155.059 13.73c-4.035.02-3.997-5.492-5.451-8.065zm-30.139-5.355l10.438-.045v2.74c-4.313.95-5.115 3.312-6.43 6.2-.948 2.335-1.067 4.374-4.065 4.547zm9.46 98.126c.857-.274 1.948-.275 2.944-1.752.813-1.204 0-32.396 0-32.396-.557-1.855-1.952-1.886-3.426-2.537-.93-.685-.601-1.166-.535-2.282h17.823c.068.85.18 1.935-.435 2.247-1.465.513-3.027 1.099-3.405 2.417-.292 1.071-.741 30.608-.01 32.227.707 1.67 1.749 1.451 3.143 1.98 1.325.696.809 1.397.809 2.529h-18.022c-.086-2.297-.222-2.09 1.115-2.433zm-.754-59.058c1.33-.532 2.742-.247 3.85-2.013.371-.59.466-37.1.466-37.1h9.695l.28 36.94c.979 2.073 3.11 1.755 3.997 2.065.887.31.476 2.384.476 2.384h-19.407c-.035-.943-.013-1.976.643-2.276zm15.581-56.417c-.231-.232-.141-1.793.116-2.002 1.108-.55 2.534-.689 3.32-1.565 1.953-.937.16-27.4.43-30.849l-5.594 21.477-1.92-4.68c2.064-7.84 3.842-15.762 5.972-23.586l15.27-.072v2.098l-1.37.444c-.753.244-1.544.6-1.76.792-.942.838-.932.635-.932 17.393 0 14.168.033 15.838.324 16.45 1.147 1.55 2.095 1.55 3.836 2.07v2.162l-17.692-.133zm-24.094-36.522c-.164-.084-1.232-.373-2.376-.641-3.358-.79-3.169-.64-3.169-2.506v-1.59l14.16.001 12.402 32.575-1.907 8.712-5.007.112z" />
-						<path
-							d="M214.134 84.203c1.077-.478 2.335-.752 3.283-1.467 1.085-.854 1.074-.713 1.078-13.958.005-10.868.037-12.17.294-11.641 1.363 3.39 2.322 6.023 3.663 9.607-.058 3.161-.909 12.02.378 14.968.398.879 1.109 1.4 2.692 1.97 1.646.685 1.485 1.203 1.485 2.666h-12.873z" />
-					</svg>
+					<img src="../png/icon144.png" alt="">
 				</a>
 			</div>
 			<ul>
@@ -77,7 +83,7 @@
 					</a>
 				</li>
 				<li>
-					<div id="theme-toggle">
+					<div class="theme-toggle">
 						<span class="light-icon theme-icon">
 							<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
 								xmlns="http://www.w3.org/2000/svg">
@@ -100,16 +106,21 @@
 	<main>
 		<div class="grid">
 			<div>
+				<input id="dmn" type="text" /><br>
+				<div id="res_btn">Reset to current domain</div>
+			</div>
+			<div>
 				<input type="checkbox" id="st_bl" class="toggle" />
 				<label for="st_bl">Enable on this website </label> <br>
 			</div>
 			<div>
-				<input id="dmn" type="text" /><br>
-				<div id="res_btn">Reset to current domain</div>
+				<h2>Global Options</h2>
 			</div>
-
-			<div>
-				<hr>
+			<div class="card">
+				<div class="with-icon-right">
+					<input type="text" id="hex_global" maxlength="7" class="hex_input">
+					<span class="clfrt" id="hex_global_cl"></span>
+				</div>
 				<ul class="_list-box">
 					<li>
 						<input type="checkbox" id="opt0" class="toggle" />
@@ -117,7 +128,7 @@
 					</li>
 					<li>
 						<input type="checkbox" id="opt1" class="toggle" />
-						<label for="opt1">Don't use white/black colors</label>
+						<label for="opt1">Skip white/black (use default)</label>
 					</li>
 					<li>
 						<input type="checkbox" id="opt2" class="toggle" />
@@ -125,43 +136,43 @@
 					</li>
 				</ul>
 			</div>
+
 			<div>
-				<span key="pkr" class="pkr _ta-center" id="pkr">
-					<h4 class="dscr">HEX</h3>
-						<div class="ic_">
-							<span id="def_btn"><svg class="icon" fill="currentColor" viewBox="0 0 20 20"
-									xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z">
-									</path>
-									<path fill-rule="evenodd"
-										d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"
-										clip-rule="evenodd"></path>
-								</svg></span>
-							<input type="text" id="hex_in" maxlength="7" class="_ta-center">
-						</div>
-						<div class="swatch" id="color"></div>
-						<h4 class="dscr">HUE</h4>
-						<div class="sld_cnt"><input id="hue" type="range" min="1" max="300" value="130"
-								class="slider hue" /></div>
-						<h4 class="dscr">SATURATION</h4>
-						<div class="sld_cnt"><input id="sat" type="range" min="1" max="100" value="60"
-								class="slider sat" /></div>
-						<h4 class="dscr">LIGHT</h4>
-						<div class="sld_cnt"><input id="light" type="range" min="1" max="100" value="55"
-								class="slider light" /></div>
-				</span>
+				<input type="checkbox" id="optc" class="toggle" />
+				<label for="optc" class="h2"><b>Custom</b></label>
+			</div>
+			<div class="card">
+				<div class="with-icon-right">
+					<input type="text" id="hex_custom" maxlength="7" class="hex_input">
+					<span class="clfrt" id="hex_custom_cl"></span>
+				</div>
+				<ul class="_list-box">
+					<li>
+						<input type="checkbox" id="opt0c" class="toggle" />
+						<label for="opt0c">Auto detect color from website</label>
+					</li>
+					<li>
+						<input type="checkbox" id="opt1c" class="toggle" />
+						<label for="opt1c">Skip white/black (use custom)</label>
+					</li>
+					<li>
+						<input type="checkbox" id="opt2c" class="toggle" />
+						<label for="opt2c">Keep color detection updated</label>
+					</li>
+				</ul>
 			</div>
 			<div>
-				<h4 class="_cl-red" id="status"></h4>
-				<div class="_g-flex">
-					<button id="save_btn" class="_bg-green"><svg fill="currentColor" viewBox="0 0 20 20"
+				<h2>Advanced</h2>
+			</div>
+			<div class="card">
+				<div class="_2-col">
+					<button id="save_btn" class="btn-green"><svg fill="currentColor" viewBox="0 0 20 20"
 							xmlns="http://www.w3.org/2000/svg">
 							<path
 								d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z">
 							</path>
 						</svg>&nbsp;&nbsp; Save</button>
-					<button id="res2_btn" class="_bg-red"><svg fill="currentColor" viewBox="0 0 20 20"
+					<button id="res2_btn" class="btn-red"><svg fill="currentColor" viewBox="0 0 20 20"
 							xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd"
 								d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
@@ -188,27 +199,22 @@
 	</main>
 	<footer>
 		<div class="grid">
-			<div>Meta Theme Injector v1.0.2 </div>
+			<div>Meta Theme Injector v2.0.0 </div>
 			<div>Licensed under <b><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">(CC BY-NC-SA
 						4.0)</a></b></div>
 			<div><a href="https://heroicons.dev/">Heroicons</a> licensed under <b><a
 						href="https://github.com/tailwindlabs/heroicons/blob/master/LICENSE">MTI</a></b></div>
 			<div> Made with
-				<svg class="icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<svg class="_icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 					<path fill-rule="evenodd"
 						d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
 						clip-rule="evenodd"></path>
 				</svg> by d3ward </div>
 		</div>
 	</footer>
-	<div id="mylrt" class="lrt">
-		<div class="lrt_cnt">
-			<div class="lrt-body" id="lrt_body"></div>
-			<div class="lrt-footer _g-flex"><button id="can_lrt">Cancel </button><button id="ok_lrt"> Ok </button></div>
-		</div>
-	</div>
-	<script type="text/javascript" src="../js/data-storage.js"></script>
-	<script type="text/javascript" src="popup.js"></script>
+
 </body>
+<script type="text/javascript" src="../js/data-storage.js"></script>
+<script type="text/javascript" src="popup.js"></script>
 
 </html>

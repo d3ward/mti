@@ -11,20 +11,23 @@
 	}
 	window.DataStorage = DataStorage;
 	class InjectedData {
-		constructor(domain,color,opt) {
+		constructor(domain,color,opt,bl) {
 			this.color = color ? color : "default";
 			this.domain = domain;
-			this.opt= (opt)? opt:  [true,true,true,true];
+			this.opt= (opt)? opt: [false,false,false,false];
+			this.bl = bl;
+			
 		}
 		serialize() {
 			return {
 				color: this.color,
 				domain: this.domain,
-				opt: this.opt
+				opt: this.opt,
+				bl: this.bl
 			}
 		}
 		static deserialize(key, serializedData) {
-			return new InjectedData(key, serializedData.color,serializedData.opt);
+			return new InjectedData(key, serializedData.color,serializedData.opt ,serializedData.bl);
 		}
 	}
 	window.InjectedData = InjectedData;
@@ -44,7 +47,7 @@
 					if (!wildcardMatch(key, hostName)) continue;
 					return this.dataStorage.load(key).then(value => InjectedData.deserialize(key, value));
 				}
-				return new InjectedData(hostName);
+				return false;
 			})
 		}
 		remove(key) {this.dataStorage.remove(key);}
@@ -52,6 +55,8 @@
 		static getCurrentDomain() {
 			var url = window.location.href;
 			if (window.tab && window.tab.url) url = tab.url;
+			console.log(url);
+			if(url.match(/[^\/]+\/\/[^\/]+/) != undefined)
 			return url.match(/[^\/]+\/\/[^\/]+/)[0];
 		}
 	}

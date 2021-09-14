@@ -5,7 +5,7 @@
 	"description": "Meta Theme Injector let you customize the theme-color meta tag",
 	"version": "1.0.2",
 	"browser_action": {
-		"default_icon": "src/png/icon20.png",
+		"default_icon": "src/png/icon512.png",
 		"default_popup": "src/popup/popup.html",
 		"default_title": "Edit theme-color meta tag"
 	},
@@ -13,7 +13,8 @@
         "20": "src/png/icon20.png",
         "48": "src/png/icon48.png",
 		"144": "src/png/icon144.png",
-		"256": "src/png/icon256.png"
+		"256": "src/png/icon256.png",
+		"512": "src/png/icon512.png"
     },
 	"permissions": ["tabs","storage","downloads"],
 	"content_scripts": [{
